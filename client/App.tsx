@@ -1,6 +1,7 @@
 import "./global.css";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowRight, Bell, BookOpen, Box, Check, ChevronRight, CircleHelp, CloudUpload,
@@ -68,3 +69,5 @@ function Success() { const navigate=useNavigate(); return <div className="mx-aut
 
 function AppRoutes() { return <Routes><Route path="/" element={<Landing/>}/><Route path="/login" element={<Login/>}/><Route element={<Shell/>}><Route path="/dashboard" element={<Dashboard/>}/><Route path="/add-product" element={<Journey type="/add-product"/>}/><Route path="/add-product/studio" element={<Journey type="/add-product/studio"/>}/><Route path="/add-product/catalogue" element={<Journey type="/add-product/catalogue"/>}/><Route path="/add-product/story" element={<Journey type="/add-product/story"/>}/><Route path="/add-product/pricing" element={<Journey type="/add-product/pricing"/>}/><Route path="/add-product/similarity" element={<Journey type="/add-product/similarity"/>}/><Route path="/add-product/review" element={<Journey type="/add-product/review"/>}/><Route path="/add-product/linkage" element={<Journey type="/add-product/linkage"/>}/><Route path="/publish-success" element={<Success/>}/><Route path="/products" element={<Products/>}/><Route path="/insights" element={<Insights/>}/><Route path="/catalogue" element={<Catalogue/>}/><Route path="/profile" element={<Profile/>}/></Route><Route path="*" element={<Navigate to="/" replace/>}/></Routes>; }
 export default function App(){return <QueryClientProvider client={queryClient}><BrowserRouter><AppRoutes/></BrowserRouter></QueryClientProvider>}
+
+createRoot(document.getElementById("root")!).render(<App />);
