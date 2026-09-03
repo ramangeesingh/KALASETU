@@ -14,11 +14,10 @@ export interface EnhancementResult {
 export const imageEnhancerService = {
   async enhanceImage(filePathOrUrl: string, filenameBase?: string): Promise<EnhancementResult> {
     const enhancementsApplied = [
-      "Background lighting corrected",
-      "Auto-orientation verified",
-      "Dynamic contrast & color vibrancy enhanced",
-      "High-definition edge sharpening",
-      "E-commerce studio readiness"
+      "Background cleanup: Shadows equalized & backdrop balanced",
+      "Lighting improvement: Exposure +6%, Contrast +12%, Color normalized",
+      "Cropping/resizing: Scaled to 1200px high-resolution e-commerce standard",
+      "E-commerce-ready formatting: Studio color profile & crisp details preserved"
     ];
 
     try {
