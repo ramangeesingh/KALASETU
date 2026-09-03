@@ -25,6 +25,9 @@
   .field-label { @apply block text-xs font-semibold text-[#76594D]; } .field { @apply mt-2 block w-full rounded-xl border border-[#E3D7B8] bg-[#FFFDF8] px-3 py-3 text-sm font-normal outline-none transition focus:border-[#9C0000] focus:ring-1 focus:ring-[#D4AF37]; }
   .market-row { @apply flex w-full items-center gap-3 rounded-xl border border-[#E8DDC5] bg-[#FFFDF8] p-4 transition hover:border-[#D4AF37] hover:bg-[#FFF9E8]; }
   .profile-label { @apply mb-2 block text-[10px] font-bold uppercase tracking-[.16em] text-[#A07F6A]; }
+  .language-select { @apply inline-flex items-center gap-1.5 rounded-full border border-[#E2D7BC] bg-[#FFFDF8] px-2.5 py-2 text-[#7B5D50]; }
+  .language-select select { @apply max-w-[92px] cursor-pointer bg-transparent text-xs font-semibold outline-none; }
+  .language-select option { @apply bg-[#FFFDF8] text-[#24130F]; }
   .paisley-bg { background-image: radial-gradient(ellipse at 20% 20%, transparent 0 28px, #D4AF37 29px 30px, transparent 31px), radial-gradient(ellipse at 80% 70%, transparent 0 40px, #D4AF37 41px 42px, transparent 43px); background-size: 130px 130px; }
   .mandala-bg { background-image: repeating-radial-gradient(circle at center, transparent 0 34px, #D4AF37 35px 36px, transparent 37px 55px); }
 }
