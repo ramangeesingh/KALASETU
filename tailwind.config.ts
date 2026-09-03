@@ -10,10 +10,14 @@ export default {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "3xl": "1680px",
       },
     },
     extend: {
       colors: {
+        gold: "#D4AF37",
+        royal: "#9C0000",
+        cream: "#FFE7A6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
