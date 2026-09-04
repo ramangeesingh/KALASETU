@@ -1,0 +1,8 @@
+{
+  "appId": "com.kalasetu.artisan",
+  "appName": "KalaSetu",
+  "webDir": "dist/spa",
+  "server": {
+    "androidScheme": "https"
+  }
+}

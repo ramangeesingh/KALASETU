@@ -1,4 +1,20 @@
-const API_BASE = "/api";
+const RAW_API_BASE = (import.meta.env.VITE_API_BASE_URL as string) || "/api";
+export const API_BASE = RAW_API_BASE.replace(/\/+$/, "");
+
+export function getMediaUrl(path: string | null | undefined): string {
+  if (!path) return "";
+  if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("data:") || path.startsWith("blob:")) {
+    return path;
+  }
+
+  if (API_BASE.startsWith("http://") || API_BASE.startsWith("https://")) {
+    const origin = new URL(API_BASE).origin;
+    const cleanPath = path.startsWith("/") ? path : `/${path}`;
+    return `${origin}${cleanPath}`;
+  }
+
+  return path;
+}
 
 function getToken(): string | null {
   return localStorage.getItem("kalasetu_token") || sessionStorage.getItem("kalasetu_token");

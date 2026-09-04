@@ -23,7 +23,14 @@ export function createServer() {
   const app = express();
 
   // Core Middleware
-  app.use(cors());
+  app.use(
+    cors({
+      origin: true,
+      credentials: true,
+      allowedHeaders: ["Content-Type", "Authorization", "Accept"],
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    })
+  );
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
